@@ -1,0 +1,16 @@
+{
+  "name": "forge-demo",
+  "license": "MIT",
+  "componentsDir": "src/components",
+  "outputDir": "public",
+  "tokenRequired": false,
+  "typescript": true,
+  "tailwind": true,
+  "defaultCategory": "ui",
+  "categories": [
+    "ui",
+    "forms",
+    "layout",
+    "navigation"
+  ]
+}
