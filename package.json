@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "forge-demo",
+  "name": "@jackcharlielopez/forge-demo",
   "version": "0.1.0",
   "description": "A beautiful component library",
   "main": "dist/index.js",
