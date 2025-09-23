@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { Radio } from "./radio.js";
+declare const meta: Meta<typeof Radio>;
+export default meta;
+type Story = StoryObj<typeof Radio>;
+export declare const Default: Story;
+export declare const Error: Story;
+export declare const Success: Story;
+export declare const Small: Story;
+export declare const Large: Story;

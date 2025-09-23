@@ -1,0 +1,84 @@
+{
+  "name": "checkbox",
+  "displayName": "Checkbox",
+  "description": "A checkbox component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "checkbox",
+      "path": "checkbox.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.js",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.stories.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.stories.js",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.test.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.test.js",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "checkbox.tsx",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "variants.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "variants.js",
+      "type": "component"
+    },
+    {
+      "name": "checkbox",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

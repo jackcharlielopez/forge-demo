@@ -1,0 +1,84 @@
+{
+  "name": "skeleton",
+  "displayName": "Skeleton",
+  "description": "A skeleton component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "skeleton",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.js",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.stories.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.stories.js",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.test.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.test.js",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "skeleton.tsx",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "variants.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "variants.js",
+      "type": "component"
+    },
+    {
+      "name": "skeleton",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

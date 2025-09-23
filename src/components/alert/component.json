@@ -1,0 +1,84 @@
+{
+  "name": "alert",
+  "displayName": "Alert",
+  "description": "A alert component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "alert",
+      "path": "alert.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.js",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.stories.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.stories.js",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.test.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.test.js",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "alert.tsx",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "variants.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "variants.js",
+      "type": "component"
+    },
+    {
+      "name": "alert",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

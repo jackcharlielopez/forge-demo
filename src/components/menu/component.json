@@ -1,0 +1,84 @@
+{
+  "name": "menu",
+  "displayName": "Menu",
+  "description": "A menu component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "menu",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.js",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.stories.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.stories.js",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.test.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.test.js",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "menu.tsx",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "variants.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "variants.js",
+      "type": "component"
+    },
+    {
+      "name": "menu",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

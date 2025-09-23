@@ -1,0 +1,84 @@
+{
+  "name": "badge",
+  "displayName": "Badge",
+  "description": "A badge component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "badge",
+      "path": "badge.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.js",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.stories.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.stories.js",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.test.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.test.js",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "variants.d.ts",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "variants.js",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

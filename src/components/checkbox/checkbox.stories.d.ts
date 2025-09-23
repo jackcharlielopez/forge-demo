@@ -1,0 +1,11 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { Checkbox } from "./checkbox.js";
+declare const meta: Meta<typeof Checkbox>;
+export default meta;
+type Story = StoryObj<typeof Checkbox>;
+export declare const Default: Story;
+export declare const Error: Story;
+export declare const Success: Story;
+export declare const Indeterminate: Story;
+export declare const Small: Story;
+export declare const Large: Story;
