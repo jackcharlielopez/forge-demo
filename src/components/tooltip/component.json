@@ -1,0 +1,44 @@
+{
+  "name": "tooltip",
+  "displayName": "Tooltip",
+  "description": "A tooltip component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "tooltip",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "tooltip",
+      "path": "tooltip.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "tooltip",
+      "path": "tooltip.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "tooltip",
+      "path": "tooltip.tsx",
+      "type": "component"
+    },
+    {
+      "name": "tooltip",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

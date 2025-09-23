@@ -1,0 +1,44 @@
+{
+  "name": "drawer",
+  "displayName": "Drawer",
+  "description": "A drawer component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "drawer",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "drawer",
+      "path": "drawer.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "drawer",
+      "path": "drawer.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "drawer",
+      "path": "drawer.tsx",
+      "type": "component"
+    },
+    {
+      "name": "drawer",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

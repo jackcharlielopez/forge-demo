@@ -1,0 +1,44 @@
+{
+  "name": "input",
+  "displayName": "Input",
+  "description": "A input component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "input",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "input",
+      "path": "input.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "input",
+      "path": "input.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "input",
+      "path": "input.tsx",
+      "type": "component"
+    },
+    {
+      "name": "input",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

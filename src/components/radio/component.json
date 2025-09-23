@@ -1,0 +1,44 @@
+{
+  "name": "radio",
+  "displayName": "Radio",
+  "description": "A radio component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "radio",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "radio",
+      "path": "radio.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "radio",
+      "path": "radio.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "radio",
+      "path": "radio.tsx",
+      "type": "component"
+    },
+    {
+      "name": "radio",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

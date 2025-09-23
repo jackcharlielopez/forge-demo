@@ -1,0 +1,44 @@
+{
+  "name": "timeline",
+  "displayName": "Timeline",
+  "description": "A timeline component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "timeline",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "timeline",
+      "path": "timeline.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "timeline",
+      "path": "timeline.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "timeline",
+      "path": "timeline.tsx",
+      "type": "component"
+    },
+    {
+      "name": "timeline",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

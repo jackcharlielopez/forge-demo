@@ -1,0 +1,44 @@
+{
+  "name": "breadcrumbs",
+  "displayName": "Breadcrumbs",
+  "description": "A breadcrumbs component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "breadcrumbs",
+      "path": "breadcrumbs.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "breadcrumbs",
+      "path": "breadcrumbs.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "breadcrumbs",
+      "path": "breadcrumbs.tsx",
+      "type": "component"
+    },
+    {
+      "name": "breadcrumbs",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "breadcrumbs",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

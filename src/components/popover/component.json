@@ -1,0 +1,44 @@
+{
+  "name": "popover",
+  "displayName": "Popover",
+  "description": "A popover component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "popover",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "popover",
+      "path": "popover.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "popover",
+      "path": "popover.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "popover",
+      "path": "popover.tsx",
+      "type": "component"
+    },
+    {
+      "name": "popover",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

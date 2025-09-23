@@ -1,0 +1,44 @@
+{
+  "name": "avatar",
+  "displayName": "Avatar",
+  "description": "A avatar component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "avatar",
+      "path": "avatar.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "avatar",
+      "path": "avatar.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "avatar",
+      "path": "avatar.tsx",
+      "type": "component"
+    },
+    {
+      "name": "avatar",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "avatar",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

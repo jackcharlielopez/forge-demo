@@ -1,0 +1,44 @@
+{
+  "name": "stepper",
+  "displayName": "Stepper",
+  "description": "A stepper component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "stepper",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "stepper",
+      "path": "stepper.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "stepper",
+      "path": "stepper.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "stepper",
+      "path": "stepper.tsx",
+      "type": "component"
+    },
+    {
+      "name": "stepper",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

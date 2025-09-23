@@ -1,0 +1,44 @@
+{
+  "name": "switch",
+  "displayName": "Switch",
+  "description": "A switch component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "switch",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "switch",
+      "path": "switch.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "switch",
+      "path": "switch.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "switch",
+      "path": "switch.tsx",
+      "type": "component"
+    },
+    {
+      "name": "switch",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

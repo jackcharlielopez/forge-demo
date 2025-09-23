@@ -1,0 +1,44 @@
+{
+  "name": "accordion",
+  "displayName": "Accordion",
+  "description": "A accordion component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "accordion",
+      "path": "accordion.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "accordion",
+      "path": "accordion.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "accordion",
+      "path": "accordion.tsx",
+      "type": "component"
+    },
+    {
+      "name": "accordion",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "accordion",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

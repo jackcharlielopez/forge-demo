@@ -1,0 +1,44 @@
+{
+  "name": "pagination",
+  "displayName": "Pagination",
+  "description": "A pagination component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "pagination",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "pagination",
+      "path": "pagination.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "pagination",
+      "path": "pagination.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "pagination",
+      "path": "pagination.tsx",
+      "type": "component"
+    },
+    {
+      "name": "pagination",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

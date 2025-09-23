@@ -1,0 +1,44 @@
+{
+  "name": "textarea",
+  "displayName": "Textarea",
+  "description": "A textarea component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "textarea",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "textarea",
+      "path": "textarea.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "textarea",
+      "path": "textarea.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "textarea",
+      "path": "textarea.tsx",
+      "type": "component"
+    },
+    {
+      "name": "textarea",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}

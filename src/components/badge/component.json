@@ -1,0 +1,44 @@
+{
+  "name": "badge",
+  "displayName": "Badge",
+  "description": "A badge component",
+  "category": "ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "props": [],
+  "dependencies": [],
+  "peerDependencies": [],
+  "files": [
+    {
+      "name": "badge",
+      "path": "badge.stories.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.test.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "badge.tsx",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "component.json",
+      "type": "component"
+    },
+    {
+      "name": "badge",
+      "path": "variants.ts",
+      "type": "component"
+    }
+  ],
+  "examples": [],
+  "registryDependencies": [],
+  "tags": [],
+  "private": false,
+  "deprecated": false,
+  "experimental": false
+}
