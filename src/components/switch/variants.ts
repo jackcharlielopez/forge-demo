@@ -24,5 +24,5 @@ export const switchVariants = cva(
       error: false,
       success: false,
     },
-  }
+  },
 );

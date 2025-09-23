@@ -13,8 +13,17 @@ type DrawerProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
   (
-    { open, onClose, side = "right", size = "md", title, children, className, ...props },
-    ref
+    {
+      open,
+      onClose,
+      side = "right",
+      size = "md",
+      title,
+      children,
+      className,
+      ...props
+    },
+    ref,
   ) => {
     if (!open) return null;
     return (
@@ -23,7 +32,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
           className={cn(
             "bg-white shadow-lg h-full w-full max-w-full relative flex flex-col",
             drawerVariants({ size }),
-            className
+            className,
           )}
           ref={ref}
           {...props}
@@ -36,11 +45,13 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
           >
             ×
           </button>
-          {title && <h2 className="text-lg font-semibold mb-4 p-4 border-b">{title}</h2>}
+          {title && (
+            <h2 className="text-lg font-semibold mb-4 p-4 border-b">{title}</h2>
+          )}
           <div className="flex-1 overflow-auto p-4">{children}</div>
         </div>
       </div>
     );
-  }
+  },
 );
 Drawer.displayName = "Drawer";

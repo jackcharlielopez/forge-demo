@@ -30,9 +30,9 @@ describe("Checkbox", () => {
   });
 
   it("supports different sizes", () => {
-  render(<Checkbox uiSize="sm" />);
+    render(<Checkbox uiSize="sm" />);
     expect(screen.getAllByRole("checkbox")[0]).toHaveClass("w-4");
-  render(<Checkbox uiSize="lg" />);
+    render(<Checkbox uiSize="lg" />);
     expect(screen.getAllByRole("checkbox")[1]).toHaveClass("w-6");
   });
 

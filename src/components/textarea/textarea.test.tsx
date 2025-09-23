@@ -6,7 +6,9 @@ import { Textarea } from "./textarea";
 describe("Textarea", () => {
   it("renders with default props", () => {
     render(<Textarea placeholder="Type your message..." />);
-    expect(screen.getByPlaceholderText("Type your message...")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("Type your message..."),
+    ).toBeInTheDocument();
   });
 
   it("applies error variant", () => {

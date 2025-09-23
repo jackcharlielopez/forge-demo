@@ -16,9 +16,7 @@ type Story = StoryObj<typeof Pagination>;
 
 const Template = (args: React.ComponentProps<typeof Pagination>) => {
   const [page, setPage] = React.useState(1);
-  return (
-    <Pagination {...args} page={page} onPageChange={setPage} />
-  );
+  return <Pagination {...args} page={page} onPageChange={setPage} />;
 };
 
 export const Default: Story = {

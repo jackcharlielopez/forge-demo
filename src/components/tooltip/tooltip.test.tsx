@@ -6,37 +6,43 @@ describe("Tooltip", () => {
     render(
       <Tooltip content="Hello tooltip">
         <button>Hover me</button>
-      </Tooltip>
+      </Tooltip>,
     );
     fireEvent.mouseEnter(screen.getByText("Hover me"));
-    expect(await screen.findByRole("tooltip")).toHaveTextContent("Hello tooltip");
+    expect(await screen.findByRole("tooltip")).toHaveTextContent(
+      "Hello tooltip",
+    );
   });
 
   it("shows tooltip on focus", async () => {
     render(
       <Tooltip content="Focus tooltip">
         <button>Focus me</button>
-      </Tooltip>
+      </Tooltip>,
     );
     fireEvent.focus(screen.getByText("Focus me"));
-    expect(await screen.findByRole("tooltip")).toHaveTextContent("Focus tooltip");
+    expect(await screen.findByRole("tooltip")).toHaveTextContent(
+      "Focus tooltip",
+    );
   });
 
   it("respects side and size props", async () => {
     render(
       <Tooltip content="Side tooltip" side="right" size="lg">
         <button>Side</button>
-      </Tooltip>
+      </Tooltip>,
     );
     fireEvent.mouseEnter(screen.getByText("Side"));
-    expect(await screen.findByRole("tooltip")).toHaveTextContent("Side tooltip");
+    expect(await screen.findByRole("tooltip")).toHaveTextContent(
+      "Side tooltip",
+    );
   });
 
   it("spreads additional props", () => {
     render(
       <Tooltip content="Test" data-testid="tooltip">
         <button>Test</button>
-      </Tooltip>
+      </Tooltip>,
     );
     expect(screen.getByTestId("tooltip")).toBeInTheDocument();
   });

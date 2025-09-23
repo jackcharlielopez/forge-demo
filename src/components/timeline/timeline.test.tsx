@@ -29,10 +29,8 @@ describe("Timeline", () => {
   it("renders custom icons", () => {
     render(
       <Timeline
-        items={[
-          { label: "Custom", icon: <span data-testid="icon">★</span> },
-        ]}
-      />
+        items={[{ label: "Custom", icon: <span data-testid="icon">★</span> }]}
+      />,
     );
     expect(screen.getByTestId("icon")).toBeInTheDocument();
   });

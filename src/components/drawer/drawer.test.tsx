@@ -8,7 +8,7 @@ describe("Drawer", () => {
     render(
       <Drawer open={true} onClose={() => {}} title="Test Drawer">
         <div>Drawer Content</div>
-      </Drawer>
+      </Drawer>,
     );
     expect(screen.getByText("Test Drawer")).toBeInTheDocument();
     expect(screen.getByText("Drawer Content")).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe("Drawer", () => {
     render(
       <Drawer open={false} onClose={() => {}} title="Closed Drawer">
         <div>Should not be visible</div>
-      </Drawer>
+      </Drawer>,
     );
     expect(screen.queryByText("Closed Drawer")).toBeNull();
   });
@@ -28,7 +28,7 @@ describe("Drawer", () => {
     render(
       <Drawer open={true} onClose={onClose} title="Closable Drawer">
         <div>Content</div>
-      </Drawer>
+      </Drawer>,
     );
     fireEvent.click(screen.getByLabelText("Close"));
     expect(onClose).toHaveBeenCalled();
@@ -36,10 +36,18 @@ describe("Drawer", () => {
 
   it("applies side and size variants", () => {
     render(
-      <Drawer open={true} onClose={() => {}} side="left" size="lg" title="Large Drawer">
+      <Drawer
+        open={true}
+        onClose={() => {}}
+        side="left"
+        size="lg"
+        title="Large Drawer"
+      >
         <div>Large Content</div>
-      </Drawer>
+      </Drawer>,
     );
-    expect(screen.getByText("Large Drawer").parentElement).toHaveClass("w-[32rem]");
+    expect(screen.getByText("Large Drawer").parentElement).toHaveClass(
+      "w-[32rem]",
+    );
   });
 });

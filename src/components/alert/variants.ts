@@ -1,9 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const alertVariants = cva(
-  [
-    "relative w-full rounded-lg p-4 flex items-start gap-3 border text-sm",
-  ],
+  ["relative w-full rounded-lg p-4 flex items-start gap-3 border text-sm"],
   {
     variants: {
       type: {
@@ -17,5 +15,5 @@ export const alertVariants = cva(
     defaultVariants: {
       type: "default",
     },
-  }
+  },
 );

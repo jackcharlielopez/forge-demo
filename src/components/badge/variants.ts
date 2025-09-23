@@ -24,5 +24,5 @@ export const badgeVariants = cva(
       color: "default",
       shape: "pill",
     },
-  }
+  },
 );

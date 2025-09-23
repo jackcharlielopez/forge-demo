@@ -31,9 +31,9 @@ describe("Dropdown", () => {
       <Dropdown
         trigger={<button>Open</button>}
         items={items.map((item) =>
-          item.label === "Disabled" ? { ...item, onClick } : item
+          item.label === "Disabled" ? { ...item, onClick } : item,
         )}
-      />
+      />,
     );
     fireEvent.click(screen.getByText("Open"));
     fireEvent.click(screen.getByText("Disabled"));

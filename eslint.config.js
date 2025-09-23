@@ -6,9 +6,12 @@ export default [
   js.configs.recommended,
   {
     files: [
-      "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
       ".storybook/**/*.{js,jsx,ts,tsx}",
-      "**/*.config.{js,ts,cjs,mjs}"
+      "**/*.config.{js,ts,cjs,mjs}",
     ],
     languageOptions: {
       parser: tsParser,

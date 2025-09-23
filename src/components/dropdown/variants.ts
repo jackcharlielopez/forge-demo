@@ -18,7 +18,7 @@ export const dropdownVariants = cva(
       size: "md",
       align: "left",
     },
-  }
+  },
 );
 
 export const dropdownItemVariants = cva(
@@ -38,7 +38,7 @@ export const dropdownItemVariants = cva(
       active: false,
       danger: false,
     },
-  }
+  },
 );
 
 export type DropdownVariants = VariantProps<typeof dropdownVariants>;

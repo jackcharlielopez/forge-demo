@@ -7,7 +7,12 @@ describe("Accordion", () => {
   const items = [
     { label: "Section 1", value: "s1", content: <div>Content 1</div> },
     { label: "Section 2", value: "s2", content: <div>Content 2</div> },
-    { label: "Section 3", value: "s3", content: <div>Content 3</div>, disabled: true },
+    {
+      label: "Section 3",
+      value: "s3",
+      content: <div>Content 3</div>,
+      disabled: true,
+    },
   ];
 
   it("renders sections and content", () => {
@@ -23,10 +28,10 @@ describe("Accordion", () => {
   });
 
   it("does not open disabled section", () => {
-  render(<Accordion items={items} defaultValue={[]} />);
-  fireEvent.click(screen.getByText("Section 3"));
-  const content = screen.getByText("Content 3");
-  expect(content).not.toBeVisible();
+    render(<Accordion items={items} defaultValue={[]} />);
+    fireEvent.click(screen.getByText("Section 3"));
+    const content = screen.getByText("Content 3");
+    expect(content).not.toBeVisible();
   });
 
   it("supports multiple open sections", () => {
@@ -37,7 +42,7 @@ describe("Accordion", () => {
   });
 
   it("calls onChange when toggled", () => {
-  const onChange = vi.fn();
+    const onChange = vi.fn();
     render(<Accordion items={items} defaultValue={[]} onChange={onChange} />);
     fireEvent.click(screen.getByText("Section 1"));
     expect(onChange).toHaveBeenCalledWith(["s1"]);

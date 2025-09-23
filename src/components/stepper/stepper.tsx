@@ -20,9 +20,11 @@ type StepperProps = React.HTMLAttributes<HTMLDivElement> & {
 export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
   (
     { steps, value, defaultValue, onChange, size = "md", className, ...props },
-    ref
+    ref,
   ) => {
-    const [selected, setSelected] = React.useState(defaultValue || steps[0]?.value);
+    const [selected, setSelected] = React.useState(
+      defaultValue || steps[0]?.value,
+    );
     const controlled = value !== undefined;
     const current = controlled ? value : selected;
 
@@ -33,7 +35,11 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
     };
 
     return (
-      <div ref={ref} className={cn(stepperVariants({ size }), className)} {...props}>
+      <div
+        ref={ref}
+        className={cn(stepperVariants({ size }), className)}
+        {...props}
+      >
         {steps.map((step, i) => {
           const isActive = current === step.value;
           const isCompleted = !!step.completed;
@@ -44,17 +50,26 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                 className={cn(
                   stepVariants({ active: isActive, completed: isCompleted }),
                   "flex flex-col items-center focus:outline-none",
-                  step.disabled && "opacity-50 cursor-not-allowed"
+                  step.disabled && "opacity-50 cursor-not-allowed",
                 )}
                 aria-current={isActive ? "step" : undefined}
                 aria-disabled={step.disabled}
                 disabled={step.disabled}
                 onClick={() => handleStepClick(step.value, step.disabled)}
               >
-                <span className="w-8 h-8 flex items-center justify-center rounded-full border-2 mb-1"
+                <span
+                  className="w-8 h-8 flex items-center justify-center rounded-full border-2 mb-1"
                   style={{
-                    borderColor: isCompleted ? "#16a34a" : isActive ? "#2563eb" : "#d1d5db",
-                    background: isCompleted ? "#bbf7d0" : isActive ? "#dbeafe" : "#f3f4f6",
+                    borderColor: isCompleted
+                      ? "#16a34a"
+                      : isActive
+                        ? "#2563eb"
+                        : "#d1d5db",
+                    background: isCompleted
+                      ? "#bbf7d0"
+                      : isActive
+                        ? "#dbeafe"
+                        : "#f3f4f6",
                   }}
                 >
                   {isCompleted ? "✓" : i + 1}
@@ -69,6 +84,6 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
         })}
       </div>
     );
-  }
+  },
 );
 Stepper.displayName = "Stepper";

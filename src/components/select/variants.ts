@@ -21,5 +21,5 @@ export const selectVariants = cva(
       variant: "default",
       size: "md",
     },
-  }
+  },
 );

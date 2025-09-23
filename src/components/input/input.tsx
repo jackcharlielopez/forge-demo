@@ -3,9 +3,11 @@ import { type VariantProps } from "class-variance-authority";
 import { inputVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">, Omit<VariantProps<typeof inputVariants>, "size"> {
-  uiSize?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'error' | 'success';
+export interface InputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
+    Omit<VariantProps<typeof inputVariants>, "size"> {
+  uiSize?: "sm" | "md" | "lg";
+  variant?: "default" | "error" | "success";
   error?: boolean;
   success?: boolean;
 }
@@ -18,12 +20,14 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <input
         ref={ref}
-  className={cn(inputVariants({ variant: computedVariant, size: uiSize, className }))}
+        className={cn(
+          inputVariants({ variant: computedVariant, size: uiSize, className }),
+        )}
         aria-invalid={!!error}
         {...props}
       />
     );
-  }
+  },
 );
 
 Input.displayName = "Input";

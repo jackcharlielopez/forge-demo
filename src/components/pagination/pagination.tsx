@@ -1,5 +1,9 @@
 import * as React from "react";
-import { paginationVariants, pageButtonVariants, PaginationVariants } from "./variants";
+import {
+  paginationVariants,
+  pageButtonVariants,
+  PaginationVariants,
+} from "./variants";
 import { cn } from "../../utils/cn";
 
 type PaginationProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -13,11 +17,7 @@ type PaginationProps = React.HTMLAttributes<HTMLDivElement> & {
 function getPages(current: number, total: number) {
   const pages = [];
   for (let i = 1; i <= total; i++) {
-    if (
-      i === 1 ||
-      i === total ||
-      (i >= current - 1 && i <= current + 1)
-    ) {
+    if (i === 1 || i === total || (i >= current - 1 && i <= current + 1)) {
       pages.push(i);
     } else if (
       (i === current - 2 && current > 3) ||
@@ -31,12 +31,24 @@ function getPages(current: number, total: number) {
 
 export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
   (
-    { page, pageCount, onPageChange, size = "md", showEdges = true, className, ...props },
-    ref
+    {
+      page,
+      pageCount,
+      onPageChange,
+      size = "md",
+      showEdges = true,
+      className,
+      ...props
+    },
+    ref,
   ) => {
     const pages = getPages(page, pageCount);
     return (
-      <div ref={ref} className={cn(paginationVariants({ size }), className)} {...props}>
+      <div
+        ref={ref}
+        className={cn(paginationVariants({ size }), className)}
+        {...props}
+      >
         {showEdges && (
           <button
             type="button"
@@ -59,10 +71,16 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
         </button>
         {pages.map((pageNum, idx) =>
           pageNum === "..." ? (
-            <span key={idx} className="px-2 select-none">…</span>
+            <span key={idx} className="px-2 select-none">
+              …
+            </span>
           ) : (
             <button
-              key={typeof pageNum === 'string' ? `ellipsis-${idx}` : `page-${pageNum}`}
+              key={
+                typeof pageNum === "string"
+                  ? `ellipsis-${idx}`
+                  : `page-${pageNum}`
+              }
               type="button"
               className={pageButtonVariants({ active: pageNum === page })}
               onClick={() => onPageChange(Number(pageNum))}
@@ -70,7 +88,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
             >
               {pageNum}
             </button>
-          )
+          ),
         )}
         <button
           type="button"
@@ -94,6 +112,6 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Pagination.displayName = "Pagination";

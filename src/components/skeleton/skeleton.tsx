@@ -8,15 +8,12 @@ type SkeletonProps = React.HTMLAttributes<HTMLDivElement> & {
 };
 
 export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
-  (
-    { shape = "rect", size = "md", className, ...props },
-    ref
-  ) => (
+  ({ shape = "rect", size = "md", className, ...props }, ref) => (
     <div
       ref={ref}
       className={cn(skeletonVariants({ shape, size }), className)}
       {...props}
     />
-  )
+  ),
 );
 Skeleton.displayName = "Skeleton";

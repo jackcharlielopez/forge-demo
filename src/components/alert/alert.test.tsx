@@ -10,11 +10,19 @@ describe("Alert", () => {
 
   it("applies type variant", () => {
     render(<Alert type="success" title="Success" />);
-    expect(screen.getByText("Success").parentElement?.parentElement).toHaveClass("bg-green-50");
+    expect(
+      screen.getByText("Success").parentElement?.parentElement,
+    ).toHaveClass("bg-green-50");
   });
 
   it("renders icon, title, and description", () => {
-    render(<Alert icon={<span data-testid="icon">I</span>} title="T" description="D" />);
+    render(
+      <Alert
+        icon={<span data-testid="icon">I</span>}
+        title="T"
+        description="D"
+      />,
+    );
     expect(screen.getByTestId("icon")).toBeInTheDocument();
     expect(screen.getByText("T")).toBeInTheDocument();
     expect(screen.getByText("D")).toBeInTheDocument();

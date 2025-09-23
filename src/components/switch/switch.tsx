@@ -3,7 +3,12 @@ import { type VariantProps } from "class-variance-authority";
 import { switchVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-export interface SwitchProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type" | "onChange">, VariantProps<typeof switchVariants> {
+export interface SwitchProps
+  extends Omit<
+      React.ButtonHTMLAttributes<HTMLButtonElement>,
+      "type" | "onChange"
+    >,
+    VariantProps<typeof switchVariants> {
   checked?: boolean;
   error?: boolean;
   success?: boolean;
@@ -12,7 +17,18 @@ export interface SwitchProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
 }
 
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ className, checked = false, error, success, disabled, onChange, ...props }, ref) => {
+  (
+    {
+      className,
+      checked = false,
+      error,
+      success,
+      disabled,
+      onChange,
+      ...props
+    },
+    ref,
+  ) => {
     const handleClick = () => {
       if (disabled) return;
       onChange?.(!checked);
@@ -32,12 +48,12 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
         <span
           className={cn(
             "inline-block w-4 h-4 bg-white rounded-full shadow transform transition-transform",
-            checked ? "translate-x-5" : "translate-x-1"
+            checked ? "translate-x-5" : "translate-x-1",
           )}
         />
       </button>
     );
-  }
+  },
 );
 
 Switch.displayName = "Switch";

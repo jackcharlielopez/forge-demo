@@ -22,9 +22,9 @@ describe("Radio", () => {
 
   it("supports different sizes", () => {
     render(<Radio name="group" value="4" size="sm" />);
-  expect(screen.getAllByRole("radio")[0]).toHaveClass("w-4");
-  render(<Radio name="group" value="5" size="lg" />);
-  expect(screen.getAllByRole("radio")[1]).toHaveClass("w-6");
+    expect(screen.getAllByRole("radio")[0]).toHaveClass("w-4");
+    render(<Radio name="group" value="5" size="lg" />);
+    expect(screen.getAllByRole("radio")[1]).toHaveClass("w-6");
   });
 
   it("spreads additional props", () => {

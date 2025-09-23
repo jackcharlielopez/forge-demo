@@ -8,7 +8,7 @@ describe("Popover", () => {
       <Popover
         trigger={<button>Open</button>}
         children={<div>Popover content</div>}
-      />
+      />,
     );
     fireEvent.click(screen.getByText("Open"));
     expect(screen.getByText("Popover content")).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe("Popover", () => {
       <Popover
         trigger={<button>Open</button>}
         children={<div>Popover content</div>}
-      />
+      />,
     );
     const trigger = screen.getByText("Open");
     fireEvent.click(trigger);
@@ -35,7 +35,7 @@ describe("Popover", () => {
         children={<div>Popover content</div>}
         side="top"
         size="lg"
-      />
+      />,
     );
     fireEvent.click(screen.getByText("Open"));
     expect(screen.getByText("Popover content")).toBeInTheDocument();
@@ -47,7 +47,7 @@ describe("Popover", () => {
         trigger={<button>Open</button>}
         children={<div>Popover content</div>}
         data-testid="popover"
-      />
+      />,
     );
     expect(screen.getByTestId("popover")).toBeInTheDocument();
   });

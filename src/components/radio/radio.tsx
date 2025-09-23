@@ -3,8 +3,9 @@ import { type VariantProps } from "class-variance-authority";
 import { radioVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-
-export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size">, VariantProps<typeof radioVariants> {
+export interface RadioProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size">,
+    VariantProps<typeof radioVariants> {
   error?: boolean;
   success?: boolean;
   size?: "sm" | "md" | "lg";
@@ -19,12 +20,14 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
       <input
         ref={ref}
         type="radio"
-        className={cn(radioVariants({ variant: computedVariant, size, className }))}
+        className={cn(
+          radioVariants({ variant: computedVariant, size, className }),
+        )}
         aria-invalid={!!error}
         {...props}
       />
     );
-  }
+  },
 );
 
 Radio.displayName = "Radio";

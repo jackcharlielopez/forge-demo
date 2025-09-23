@@ -13,7 +13,7 @@ export const menuVariants = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 export const menuItemVariants = cva(
@@ -33,7 +33,7 @@ export const menuItemVariants = cva(
       active: false,
       danger: false,
     },
-  }
+  },
 );
 
 export type MenuVariants = VariantProps<typeof menuVariants>;

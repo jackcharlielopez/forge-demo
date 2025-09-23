@@ -13,7 +13,7 @@ type ModalProps = React.HTMLAttributes<HTMLDivElement> & {
 export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
   (
     { open, onClose, size = "md", title, children, className, ...props },
-    ref
+    ref,
   ) => {
     if (!open) return null;
     return (
@@ -22,7 +22,7 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
           className={cn(
             "bg-white rounded-lg shadow-lg p-6 relative",
             modalVariants({ size }),
-            className
+            className,
           )}
           ref={ref}
           {...props}
@@ -40,6 +40,6 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 Modal.displayName = "Modal";

@@ -20,10 +20,21 @@ type AccordionProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   (
-    { items, value, defaultValue, onChange, multiple = false, size = "md", className, ...props },
-    ref
+    {
+      items,
+      value,
+      defaultValue,
+      onChange,
+      multiple = false,
+      size = "md",
+      className,
+      ...props
+    },
+    ref,
   ) => {
-    const [openItems, setOpenItems] = React.useState<string[]>(defaultValue || []);
+    const [openItems, setOpenItems] = React.useState<string[]>(
+      defaultValue || [],
+    );
     const controlled = value !== undefined;
     const current = controlled ? value! : openItems;
 
@@ -46,16 +57,13 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
         {items.map((item) => {
           const isOpen = current.includes(item.value);
           return (
-            <div
-              key={item.value}
-              className={accordionItemVariants({ size })}
-            >
+            <div key={item.value} className={accordionItemVariants({ size })}>
               <button
                 type="button"
                 className={cn(
                   "w-full flex justify-between items-center py-2 px-4 focus:outline-none transition-colors",
                   isOpen ? "bg-gray-100" : "bg-white",
-                  item.disabled && "opacity-50 cursor-not-allowed"
+                  item.disabled && "opacity-50 cursor-not-allowed",
                 )}
                 aria-expanded={isOpen}
                 aria-controls={`panel-${item.value}`}
@@ -69,7 +77,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
                 id={`panel-${item.value}`}
                 className={cn(
                   "overflow-hidden transition-all duration-200",
-                  isOpen ? "max-h-96 py-2 px-4" : "max-h-0 p-0"
+                  isOpen ? "max-h-96 py-2 px-4" : "max-h-0 p-0",
                 )}
                 hidden={!isOpen}
                 role="region"
@@ -82,6 +90,6 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
         })}
       </div>
     );
-  }
+  },
 );
 Accordion.displayName = "Accordion";

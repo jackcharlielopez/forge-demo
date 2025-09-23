@@ -1,19 +1,17 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [react()]
+  plugins: [react()],
 });
 
 // Vitest config (for test runner, not used by Vite directly)
 export const test = {
-  environment: 'happy-dom',
+  environment: "happy-dom",
   globals: true,
-  setupFiles: [
-    '@testing-library/jest-dom'
-  ],
+  setupFiles: ["@testing-library/jest-dom"],
   coverage: {
-    provider: 'c8',
-    reporter: ['text', 'html']
-  }
+    provider: "c8",
+    reporter: ["text", "html"],
+  },
 };

@@ -1,5 +1,9 @@
 import * as React from "react";
-import { breadcrumbsVariants, breadcrumbItemVariants, BreadcrumbsVariants } from "./variants";
+import {
+  breadcrumbsVariants,
+  breadcrumbItemVariants,
+  BreadcrumbsVariants,
+} from "./variants";
 import { cn } from "../../utils/cn";
 
 export type Breadcrumb = {
@@ -16,12 +20,14 @@ type BreadcrumbsProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
-  (
-    { items, size = "md", separator = "/", className, ...props },
-    ref
-  ) => {
+  ({ items, size = "md", separator = "/", className, ...props }, ref) => {
     return (
-      <nav ref={ref} className={cn(breadcrumbsVariants({ size }), className)} aria-label="Breadcrumb" {...props}>
+      <nav
+        ref={ref}
+        className={cn(breadcrumbsVariants({ size }), className)}
+        aria-label="Breadcrumb"
+        {...props}
+      >
         {items.map((item, i) => (
           <React.Fragment key={i}>
             {item.href && !item.active ? (
@@ -33,15 +39,20 @@ export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
                 {item.label}
               </a>
             ) : (
-              <span className={breadcrumbItemVariants({ active: !!item.active })} aria-current={item.active ? "page" : undefined}>
+              <span
+                className={breadcrumbItemVariants({ active: !!item.active })}
+                aria-current={item.active ? "page" : undefined}
+              >
                 {item.label}
               </span>
             )}
-            {i < items.length - 1 && <span className="select-none opacity-60">{separator}</span>}
+            {i < items.length - 1 && (
+              <span className="select-none opacity-60">{separator}</span>
+            )}
           </React.Fragment>
         ))}
       </nav>
     );
-  }
+  },
 );
 Breadcrumbs.displayName = "Breadcrumbs";

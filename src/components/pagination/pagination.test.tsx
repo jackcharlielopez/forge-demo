@@ -12,7 +12,7 @@ describe("Pagination", () => {
   });
 
   it("calls onPageChange when a page is clicked", () => {
-  const onPageChange = vi.fn();
+    const onPageChange = vi.fn();
     render(<Pagination page={1} pageCount={3} onPageChange={onPageChange} />);
     fireEvent.click(screen.getByText("2"));
     expect(onPageChange).toHaveBeenCalledWith(2);
@@ -20,10 +20,12 @@ describe("Pagination", () => {
 
   it("disables prev/next at edges", () => {
     render(<Pagination page={1} pageCount={3} onPageChange={() => {}} />);
-  expect(screen.getByLabelText("Previous page")).toBeDisabled();
-  render(<Pagination page={3} pageCount={3} onPageChange={() => {}} />);
-  const nextButtons = screen.getAllByLabelText("Next page");
-  expect(nextButtons.some(btn => (btn as HTMLButtonElement).disabled)).toBe(true);
+    expect(screen.getByLabelText("Previous page")).toBeDisabled();
+    render(<Pagination page={3} pageCount={3} onPageChange={() => {}} />);
+    const nextButtons = screen.getAllByLabelText("Next page");
+    expect(nextButtons.some((btn) => (btn as HTMLButtonElement).disabled)).toBe(
+      true,
+    );
   });
 
   it("shows ellipsis for large page counts", () => {

@@ -1,9 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const cardVariants = cva(
-  [
-    "rounded-lg p-6 bg-background border transition-shadow",
-  ],
+  ["rounded-lg p-6 bg-background border transition-shadow"],
   {
     variants: {
       shadow: {
@@ -28,5 +26,5 @@ export const cardVariants = cva(
       border: "default",
       background: "default",
     },
-  }
+  },
 );

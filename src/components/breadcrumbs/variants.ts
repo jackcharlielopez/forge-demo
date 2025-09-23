@@ -13,23 +13,22 @@ export const breadcrumbsVariants = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
-export const breadcrumbItemVariants = cva(
-  "inline-flex items-center gap-1",
-  {
-    variants: {
-      active: {
-        true: "font-semibold text-blue-600",
-        false: "hover:text-blue-500 cursor-pointer",
-      },
+export const breadcrumbItemVariants = cva("inline-flex items-center gap-1", {
+  variants: {
+    active: {
+      true: "font-semibold text-blue-600",
+      false: "hover:text-blue-500 cursor-pointer",
     },
-    defaultVariants: {
-      active: false,
-    },
-  }
-);
+  },
+  defaultVariants: {
+    active: false,
+  },
+});
 
 export type BreadcrumbsVariants = VariantProps<typeof breadcrumbsVariants>;
-export type BreadcrumbItemVariants = VariantProps<typeof breadcrumbItemVariants>;
+export type BreadcrumbItemVariants = VariantProps<
+  typeof breadcrumbItemVariants
+>;

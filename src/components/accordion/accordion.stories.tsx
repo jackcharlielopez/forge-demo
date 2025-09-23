@@ -17,7 +17,12 @@ type Story = StoryObj<typeof Accordion>;
 const items = [
   { label: "Section 1", value: "s1", content: <div>Content 1</div> },
   { label: "Section 2", value: "s2", content: <div>Content 2</div> },
-  { label: "Section 3", value: "s3", content: <div>Content 3</div>, disabled: true },
+  {
+    label: "Section 3",
+    value: "s3",
+    content: <div>Content 3</div>,
+    disabled: true,
+  },
 ];
 
 export const Default: Story = {

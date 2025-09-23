@@ -20,7 +20,7 @@ export const popoverVariants = cva(
       side: "bottom",
       size: "md",
     },
-  }
+  },
 );
 
 export type PopoverVariants = VariantProps<typeof popoverVariants>;

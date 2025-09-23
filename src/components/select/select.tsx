@@ -9,9 +9,11 @@ export interface SelectOption {
   disabled?: boolean;
 }
 
-export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">, Omit<VariantProps<typeof selectVariants>, "size"> {
-  uiSize?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'error' | 'success';
+export interface SelectProps
+  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">,
+    Omit<VariantProps<typeof selectVariants>, "size"> {
+  uiSize?: "sm" | "md" | "lg";
+  variant?: "default" | "error" | "success";
   options: SelectOption[];
   error?: boolean;
   success?: boolean;
@@ -25,7 +27,9 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     return (
       <select
         ref={ref}
-  className={cn(selectVariants({ variant: computedVariant, size: uiSize, className }))}
+        className={cn(
+          selectVariants({ variant: computedVariant, size: uiSize, className }),
+        )}
         aria-invalid={!!error}
         {...props}
       >
@@ -36,7 +40,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         ))}
       </select>
     );
-  }
+  },
 );
 
 Select.displayName = "Select";

@@ -21,5 +21,5 @@ export const radioVariants = cva(
       variant: "default",
       size: "md",
     },
-  }
+  },
 );

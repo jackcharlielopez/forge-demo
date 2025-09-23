@@ -14,7 +14,7 @@ export const modalVariants = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 export type ModalVariants = VariantProps<typeof modalVariants>;

@@ -20,5 +20,5 @@ export const avatarVariants = cva(
       size: "md",
       shape: "circle",
     },
-  }
+  },
 );

@@ -1,5 +1,9 @@
 import * as React from "react";
-import { dropdownVariants, dropdownItemVariants, DropdownVariants } from "./variants";
+import {
+  dropdownVariants,
+  dropdownItemVariants,
+  DropdownVariants,
+} from "./variants";
 import { cn } from "../../utils/cn";
 
 type DropdownItem = {
@@ -20,8 +24,17 @@ type DropdownProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   (
-    { open: controlledOpen, onOpenChange, trigger, items, size = "md", align = "left", className, ...props },
-    ref
+    {
+      open: controlledOpen,
+      onOpenChange,
+      trigger,
+      items,
+      size = "md",
+      align = "left",
+      className,
+      ...props
+    },
+    ref,
   ) => {
     const [open, setOpen] = React.useState(false);
     const isOpen = controlledOpen !== undefined ? controlledOpen : open;
@@ -39,11 +52,18 @@ export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
       <div className="relative inline-block" ref={ref} {...props}>
         {React.cloneElement(trigger, {
           onClick: () => (isOpen ? handleClose() : handleOpen()),
-          'aria-haspopup': 'menu',
-          'aria-expanded': isOpen,
+          "aria-haspopup": "menu",
+          "aria-expanded": isOpen,
         })}
         {isOpen && (
-          <div className={cn("absolute mt-2", dropdownVariants({ size, align }), className)} role="menu">
+          <div
+            className={cn(
+              "absolute mt-2",
+              dropdownVariants({ size, align }),
+              className,
+            )}
+            role="menu"
+          >
             {items.map((item, i) => (
               <button
                 key={i}
@@ -64,6 +84,6 @@ export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Dropdown.displayName = "Dropdown";

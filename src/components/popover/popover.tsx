@@ -13,8 +13,17 @@ type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
   (
-    { open: controlledOpen, onOpenChange, side = "bottom", size = "md", trigger, children, className, ...props },
-    ref
+    {
+      open: controlledOpen,
+      onOpenChange,
+      side = "bottom",
+      size = "md",
+      trigger,
+      children,
+      className,
+      ...props
+    },
+    ref,
   ) => {
     const [open, setOpen] = React.useState(false);
     const isOpen = controlledOpen !== undefined ? controlledOpen : open;
@@ -32,8 +41,8 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
       <div className="relative inline-block" ref={ref} {...props}>
         {React.cloneElement(trigger, {
           onClick: () => (isOpen ? handleClose() : handleOpen()),
-          'aria-haspopup': 'dialog',
-          'aria-expanded': isOpen,
+          "aria-haspopup": "dialog",
+          "aria-expanded": isOpen,
         })}
         {isOpen && (
           <div
@@ -44,7 +53,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
               side === "left" && "right-full top-1/2 -translate-y-1/2",
               side === "right" && "left-full top-1/2 -translate-y-1/2",
               popoverVariants({ side, size }),
-              className
+              className,
             )}
             role="dialog"
           >
@@ -53,6 +62,6 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Popover.displayName = "Popover";

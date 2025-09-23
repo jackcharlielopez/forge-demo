@@ -20,8 +20,16 @@ type MenuProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
   (
-    { open: controlledOpen, onOpenChange, trigger, items, size = "md", className, ...props },
-    ref
+    {
+      open: controlledOpen,
+      onOpenChange,
+      trigger,
+      items,
+      size = "md",
+      className,
+      ...props
+    },
+    ref,
   ) => {
     const [open, setOpen] = React.useState(false);
     const isOpen = controlledOpen !== undefined ? controlledOpen : open;
@@ -39,11 +47,18 @@ export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
       <div className="relative inline-block" ref={ref} {...props}>
         {React.cloneElement(trigger, {
           onClick: () => (isOpen ? handleClose() : handleOpen()),
-          'aria-haspopup': 'menu',
-          'aria-expanded': isOpen,
+          "aria-haspopup": "menu",
+          "aria-expanded": isOpen,
         })}
         {isOpen && (
-          <div className={cn("absolute left-0 mt-2", menuVariants({ size }), className)} role="menu">
+          <div
+            className={cn(
+              "absolute left-0 mt-2",
+              menuVariants({ size }),
+              className,
+            )}
+            role="menu"
+          >
             {items.map((item) => (
               <button
                 key={item.value}
@@ -64,6 +79,6 @@ export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Menu.displayName = "Menu";

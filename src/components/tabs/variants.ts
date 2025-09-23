@@ -13,7 +13,7 @@ export const tabsListVariants = cva(
     defaultVariants: {
       size: "md",
     },
-  }
+  },
 );
 
 export const tabTriggerVariants = cva(
@@ -22,7 +22,8 @@ export const tabTriggerVariants = cva(
     variants: {
       active: {
         true: "border-blue-600 text-blue-600 font-semibold",
-        false: "border-transparent text-gray-600 hover:text-blue-600 hover:border-blue-300",
+        false:
+          "border-transparent text-gray-600 hover:text-blue-600 hover:border-blue-300",
       },
       size: {
         sm: "text-sm py-1 px-2",
@@ -34,7 +35,7 @@ export const tabTriggerVariants = cva(
       active: false,
       size: "md",
     },
-  }
+  },
 );
 
 export type TabsListVariants = VariantProps<typeof tabsListVariants>;

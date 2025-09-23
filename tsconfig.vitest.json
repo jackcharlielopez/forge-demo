@@ -1,7 +1,5 @@
 // This file tells TypeScript and ESLint to include vitest.config.ts for linting and type-checking.
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "vitest.config.ts"
-  ]
+  "include": ["vitest.config.ts"]
 }

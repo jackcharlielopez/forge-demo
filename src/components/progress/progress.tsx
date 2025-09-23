@@ -1,5 +1,10 @@
 import * as React from "react";
-import { progressVariants, progressBarVariants, ProgressVariants, ProgressBarVariants } from "./variants";
+import {
+  progressVariants,
+  progressBarVariants,
+  ProgressVariants,
+  ProgressBarVariants,
+} from "./variants";
 import { cn } from "../../utils/cn";
 
 type ProgressProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -12,12 +17,24 @@ type ProgressProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
   (
-    { value, max = 100, size = "md", color = "primary", showLabel = false, className, ...props },
-    ref
+    {
+      value,
+      max = 100,
+      size = "md",
+      color = "primary",
+      showLabel = false,
+      className,
+      ...props
+    },
+    ref,
   ) => {
-    const percent = Math.min(Math.max(value, 0), max) / max * 100;
+    const percent = (Math.min(Math.max(value, 0), max) / max) * 100;
     return (
-      <div className={cn(progressVariants({ size, color }), className)} ref={ref} {...props}>
+      <div
+        className={cn(progressVariants({ size, color }), className)}
+        ref={ref}
+        {...props}
+      >
         <div
           className={progressBarVariants({ color })}
           style={{ width: `${percent}%` }}
@@ -33,6 +50,6 @@ export const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Progress.displayName = "Progress";

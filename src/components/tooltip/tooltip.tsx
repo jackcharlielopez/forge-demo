@@ -1,5 +1,5 @@
 import * as React from "react";
-type TimeoutRef = number | ReturnType<(typeof globalThis)['setTimeout']>;
+type TimeoutRef = number | ReturnType<(typeof globalThis)["setTimeout"]>;
 import { tooltipVariants, TooltipVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
@@ -24,10 +24,10 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     const [open, setOpen] = React.useState(false);
-  const timeout = React.useRef<TimeoutRef>();
+    const timeout = React.useRef<TimeoutRef>();
 
     const show = () => {
       timeout.current = globalThis.setTimeout(() => setOpen(true), delay);
@@ -60,7 +60,7 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
               side === "left" && "right-full top-1/2 -translate-y-1/2",
               side === "right" && "left-full top-1/2 -translate-y-1/2",
               tooltipVariants({ side, size }),
-              className
+              className,
             )}
             role="tooltip"
           >
@@ -69,6 +69,6 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Tooltip.displayName = "Tooltip";

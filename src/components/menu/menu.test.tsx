@@ -23,8 +23,10 @@ describe("Menu", () => {
     render(
       <Menu
         trigger={<button>Open</button>}
-        items={items.map((item) => (item.value === "edit" ? { ...item, onClick } : item))}
-      />
+        items={items.map((item) =>
+          item.value === "edit" ? { ...item, onClick } : item,
+        )}
+      />,
     );
     fireEvent.click(screen.getByText("Open"));
     fireEvent.click(screen.getByText("Edit"));
@@ -37,8 +39,10 @@ describe("Menu", () => {
     render(
       <Menu
         trigger={<button>Open</button>}
-        items={items.map((item) => (item.value === "disabled" ? { ...item, onClick } : item))}
-      />
+        items={items.map((item) =>
+          item.value === "disabled" ? { ...item, onClick } : item,
+        )}
+      />,
     );
     fireEvent.click(screen.getByText("Open"));
     fireEvent.click(screen.getByText("Disabled"));

@@ -20,7 +20,7 @@ export const progressVariants = cva(
       size: "md",
       color: "primary",
     },
-  }
+  },
 );
 
 export const progressBarVariants = cva(
@@ -37,7 +37,7 @@ export const progressBarVariants = cva(
     defaultVariants: {
       color: "primary",
     },
-  }
+  },
 );
 
 export type ProgressVariants = VariantProps<typeof progressVariants>;

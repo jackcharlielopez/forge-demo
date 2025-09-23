@@ -23,9 +23,9 @@ describe("Input", () => {
   });
 
   it("supports different sizes", () => {
-  render(<Input uiSize="sm" placeholder="Small" />);
+    render(<Input uiSize="sm" placeholder="Small" />);
     expect(screen.getByPlaceholderText("Small")).toHaveClass("h-8");
-  render(<Input uiSize="lg" placeholder="Large" />);
+    render(<Input uiSize="lg" placeholder="Large" />);
     expect(screen.getByPlaceholderText("Large")).toHaveClass("h-12");
   });
 

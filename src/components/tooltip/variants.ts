@@ -20,7 +20,7 @@ export const tooltipVariants = cva(
       side: "top",
       size: "md",
     },
-  }
+  },
 );
 
 export type TooltipVariants = VariantProps<typeof tooltipVariants>;

@@ -30,9 +30,9 @@ describe("Select", () => {
   });
 
   it("supports different sizes", () => {
-  render(<Select options={options} uiSize="sm" />);
+    render(<Select options={options} uiSize="sm" />);
     expect(screen.getAllByRole("combobox")[0]).toHaveClass("h-8");
-  render(<Select options={options} uiSize="lg" />);
+    render(<Select options={options} uiSize="lg" />);
     expect(screen.getAllByRole("combobox")[1]).toHaveClass("h-12");
   });
 

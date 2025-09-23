@@ -21,7 +21,7 @@ describe("Breadcrumbs", () => {
     render(
       <Breadcrumbs
         items={items.map((item) => (item.href ? { ...item, onClick } : item))}
-      />
+      />,
     );
     fireEvent.click(screen.getByText("Home"));
     expect(onClick).toHaveBeenCalled();

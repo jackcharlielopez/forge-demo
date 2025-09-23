@@ -16,7 +16,9 @@ describe("Progress", () => {
   });
 
   it("applies size and color variants", () => {
-    const { container } = render(<Progress value={30} size="lg" color="danger" />);
+    const { container } = render(
+      <Progress value={30} size="lg" color="danger" />,
+    );
     expect(container.firstChild).toHaveClass("h-4");
     // Bar color is applied to inner div
     expect(container.querySelector(".bg-red-600")).toBeTruthy();

@@ -1,5 +1,9 @@
 import * as React from "react";
-import { tabsListVariants, tabTriggerVariants, TabsListVariants } from "./variants";
+import {
+  tabsListVariants,
+  tabTriggerVariants,
+  TabsListVariants,
+} from "./variants";
 import { cn } from "../../utils/cn";
 
 export type Tab = {
@@ -19,10 +23,21 @@ type TabsProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
   (
-    { tabs, value, defaultValue, onChange, size = "md", className, children, ...props },
-    ref
+    {
+      tabs,
+      value,
+      defaultValue,
+      onChange,
+      size = "md",
+      className,
+      children,
+      ...props
+    },
+    ref,
   ) => {
-    const [selected, setSelected] = React.useState(defaultValue || tabs[0]?.value);
+    const [selected, setSelected] = React.useState(
+      defaultValue || tabs[0]?.value,
+    );
     const controlled = value !== undefined;
     const current = controlled ? value : selected;
 
@@ -58,7 +73,7 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
           {React.Children.map(children, (child) => {
             if (!React.isValidElement(child)) return null;
             // Only render if child.props.value matches current
-            if ('value' in child.props && child.props.value === current) {
+            if ("value" in child.props && child.props.value === current) {
               return child;
             }
             return null;
@@ -66,7 +81,7 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 Tabs.displayName = "Tabs";
 

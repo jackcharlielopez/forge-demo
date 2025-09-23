@@ -7,7 +7,7 @@ describe("Modal", () => {
     render(
       <Modal open={true} onClose={() => {}} title="Test Modal">
         <div>Modal Content</div>
-      </Modal>
+      </Modal>,
     );
     expect(screen.getByText("Test Modal")).toBeInTheDocument();
     expect(screen.getByText("Modal Content")).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe("Modal", () => {
     render(
       <Modal open={false} onClose={() => {}} title="Closed Modal">
         <div>Should not be visible</div>
-      </Modal>
+      </Modal>,
     );
     expect(screen.queryByText("Closed Modal")).toBeNull();
   });
@@ -27,7 +27,7 @@ describe("Modal", () => {
     render(
       <Modal open={true} onClose={onClose} title="Closable Modal">
         <div>Content</div>
-      </Modal>
+      </Modal>,
     );
     fireEvent.click(screen.getByLabelText("Close"));
     expect(onClose).toHaveBeenCalled();
@@ -37,8 +37,10 @@ describe("Modal", () => {
     render(
       <Modal open={true} onClose={() => {}} size="lg" title="Large Modal">
         <div>Large Content</div>
-      </Modal>
+      </Modal>,
     );
-    expect(screen.getByText("Large Modal").parentElement).toHaveClass("max-w-lg");
+    expect(screen.getByText("Large Modal").parentElement).toHaveClass(
+      "max-w-lg",
+    );
   });
 });

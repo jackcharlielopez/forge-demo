@@ -37,13 +37,13 @@ describe("Button", () => {
   });
 
   it("forwards ref", () => {
-  const ref = vi.fn();
+    const ref = vi.fn();
     render(<Button ref={ref}>Click me</Button>);
     expect(ref).toHaveBeenCalled();
   });
 
   it("spreads additional props", async () => {
-  const onClick = vi.fn();
+    const onClick = vi.fn();
     render(<Button onClick={onClick}>Click me</Button>);
 
     await userEvent.click(screen.getByRole("button"));

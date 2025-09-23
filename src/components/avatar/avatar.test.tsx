@@ -14,17 +14,23 @@ describe("Avatar", () => {
   });
 
   it("renders fallback if image fails", () => {
-  render(<Avatar src="bad.jpg" fallback={<span data-testid="fallback">F</span>} />);
-  const img = screen.getByRole("img");
-  fireEvent.error(img);
-  expect(screen.getByTestId("fallback")).toBeInTheDocument();
+    render(
+      <Avatar src="bad.jpg" fallback={<span data-testid="fallback">F</span>} />,
+    );
+    const img = screen.getByRole("img");
+    fireEvent.error(img);
+    expect(screen.getByTestId("fallback")).toBeInTheDocument();
   });
 
   it("applies size and shape variants", () => {
-  render(<Avatar size="lg" shape="square">S</Avatar>);
-  const avatar = screen.getByText("S").closest("span");
-  expect(avatar).toHaveClass("w-16");
-  expect(avatar).toHaveClass("rounded-md");
+    render(
+      <Avatar size="lg" shape="square">
+        S
+      </Avatar>,
+    );
+    const avatar = screen.getByText("S").closest("span");
+    expect(avatar).toHaveClass("w-16");
+    expect(avatar).toHaveClass("rounded-md");
   });
 
   it("spreads additional props", () => {

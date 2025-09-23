@@ -16,7 +16,7 @@ describe("Tabs", () => {
         <TabPanel value="tab1">Panel 1</TabPanel>
         <TabPanel value="tab2">Panel 2</TabPanel>
         <TabPanel value="tab3">Panel 3</TabPanel>
-      </Tabs>
+      </Tabs>,
     );
     expect(screen.getByText("Tab 1")).toBeInTheDocument();
     expect(screen.getByText("Tab 2")).toBeInTheDocument();
@@ -29,7 +29,7 @@ describe("Tabs", () => {
         <TabPanel value="tab1">Panel 1</TabPanel>
         <TabPanel value="tab2">Panel 2</TabPanel>
         <TabPanel value="tab3">Panel 3</TabPanel>
-      </Tabs>
+      </Tabs>,
     );
     fireEvent.click(screen.getByText("Tab 2"));
     expect(screen.getByText("Panel 2")).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe("Tabs", () => {
         <TabPanel value="tab1">Panel 1</TabPanel>
         <TabPanel value="tab2">Panel 2</TabPanel>
         <TabPanel value="tab3">Panel 3</TabPanel>
-      </Tabs>
+      </Tabs>,
     );
     fireEvent.click(screen.getByText("Tab 3"));
     expect(screen.getByText("Panel 1")).toBeInTheDocument();
@@ -54,7 +54,7 @@ describe("Tabs", () => {
         <TabPanel value="tab1">Panel 1</TabPanel>
         <TabPanel value="tab2">Panel 2</TabPanel>
         <TabPanel value="tab3">Panel 3</TabPanel>
-      </Tabs>
+      </Tabs>,
     );
     fireEvent.click(screen.getByText("Tab 2"));
     expect(onChange).toHaveBeenCalledWith("tab2");

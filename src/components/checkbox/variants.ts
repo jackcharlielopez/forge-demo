@@ -21,5 +21,5 @@ export const checkboxVariants = cva(
       variant: "default",
       size: "md",
     },
-  }
+  },
 );

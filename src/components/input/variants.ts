@@ -8,7 +8,8 @@ export const inputVariants = cva(
     variants: {
       variant: {
         default: "border-input",
-        error: "border-destructive text-destructive placeholder:text-destructive-foreground",
+        error:
+          "border-destructive text-destructive placeholder:text-destructive-foreground",
         success: "border-green-500 text-green-700 placeholder:text-green-600",
       },
       size: {
@@ -21,5 +22,5 @@ export const inputVariants = cva(
       variant: "default",
       size: "md",
     },
-  }
+  },
 );

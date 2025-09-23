@@ -21,7 +21,7 @@ export const drawerVariants = cva(
       side: "right",
       size: "md",
     },
-  }
+  },
 );
 
 export type DrawerVariants = VariantProps<typeof drawerVariants>;
