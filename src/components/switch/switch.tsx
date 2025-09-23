@@ -13,7 +13,7 @@ export interface SwitchProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
 
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
   ({ className, checked = false, error, success, disabled, onChange, ...props }, ref) => {
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleClick = () => {
       if (disabled) return;
       onChange?.(!checked);
     };

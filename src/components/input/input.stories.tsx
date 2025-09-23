@@ -37,14 +37,14 @@ export const Success: Story = {
 
 export const Small: Story = {
   args: {
-    size: "sm",
+  uiSize: "sm",
     placeholder: "Small input",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: "lg",
+  uiSize: "lg",
     placeholder: "Large input",
   },
 };

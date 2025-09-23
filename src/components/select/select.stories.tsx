@@ -47,7 +47,7 @@ export const Success: Story = {
 export const Small: Story = {
   args: {
     options,
-    size: "sm",
+  uiSize: "sm",
     placeholder: "Small select",
   },
 };
@@ -55,7 +55,7 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     options,
-    size: "lg",
+  uiSize: "lg",
     placeholder: "Large select",
   },
 };

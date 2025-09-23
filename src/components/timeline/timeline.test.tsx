@@ -11,13 +11,13 @@ describe("Timeline", () => {
   ];
 
   it("renders all items and highlights active/completed", () => {
-  render(<Timeline items={items} />);
-  expect(screen.getByText("Step 1")).toBeInTheDocument();
-  // Find all indicator dots
-  const indicators = document.querySelectorAll(".w-4.h-4");
-  // Step 1: completed (green), Step 2: active (blue)
-  expect(indicators[0]).toHaveClass("border-green-600");
-  expect(indicators[1]).toHaveClass("border-blue-600");
+    const { container } = render(<Timeline items={items} />);
+    expect(screen.getByText("Step 1")).toBeInTheDocument();
+    // Find all indicator dots
+    const indicators = container.querySelectorAll(".w-4.h-4");
+    // Step 1: completed (green), Step 2: active (blue)
+    expect(indicators[0]).toHaveClass("border-green-600");
+    expect(indicators[1]).toHaveClass("border-blue-600");
   });
 
   it("renders content for each item", () => {

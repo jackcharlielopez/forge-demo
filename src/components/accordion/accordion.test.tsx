@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { Accordion } from "./accordion";
 import * as React from "react";
-import { vi } from "vitest";
 
 describe("Accordion", () => {
   const items = [

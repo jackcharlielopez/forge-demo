@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Breadcrumbs } from "./breadcrumbs.js";
-import * as React from "react";
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: "UI/Breadcrumbs",

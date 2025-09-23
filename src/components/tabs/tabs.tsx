@@ -1,5 +1,5 @@
 import * as React from "react";
-import { tabsListVariants, tabTriggerVariants, TabsListVariants, TabTriggerVariants } from "./variants";
+import { tabsListVariants, tabTriggerVariants, TabsListVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 export type Tab = {
@@ -55,9 +55,13 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
           ))}
         </div>
         <div className="pt-4" role="tabpanel">
-          {React.Children.map(children, (child: any) => {
+          {React.Children.map(children, (child) => {
             if (!React.isValidElement(child)) return null;
-            return child.props.value === current ? child : null;
+            // Only render if child.props.value matches current
+            if ('value' in child.props && child.props.value === current) {
+              return child;
+            }
+            return null;
           })}
         </div>
       </div>
@@ -71,7 +75,7 @@ export type TabPanelProps = {
   children: React.ReactNode;
 };
 
-export const TabPanel = ({ value, children }: TabPanelProps) => {
+export const TabPanel = ({ children }: Omit<TabPanelProps, 'value'> & { children: React.ReactNode }) => {
   // This is a helper for usage, actual rendering is handled in Tabs
   return <>{children}</>;
 };

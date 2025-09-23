@@ -1,5 +1,5 @@
 import * as React from "react";
-import { stepperVariants, stepVariants, StepperVariants, StepVariants } from "./variants";
+import { stepperVariants, stepVariants, StepperVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 export type Step = {

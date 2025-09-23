@@ -1,5 +1,5 @@
 import * as React from "react";
-import { timelineVariants, timelineItemVariants, TimelineVariants, TimelineItemVariants } from "./variants";
+import { timelineVariants, timelineItemVariants, TimelineVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 export type TimelineItem = {

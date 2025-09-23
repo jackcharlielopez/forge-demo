@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { Dropdown } from "./dropdown";
 import * as React from "react";
-import { vi } from "vitest";
 
 describe("Dropdown", () => {
   const items = [

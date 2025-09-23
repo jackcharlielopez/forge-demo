@@ -14,7 +14,7 @@ const meta: Meta<typeof Pagination> = {
 export default meta;
 type Story = StoryObj<typeof Pagination>;
 
-const Template = (args: any) => {
+const Template = (args: React.ComponentProps<typeof Pagination>) => {
   const [page, setPage] = React.useState(1);
   return (
     <Pagination {...args} page={page} onPageChange={setPage} />

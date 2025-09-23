@@ -14,7 +14,7 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 type Story = StoryObj<typeof Modal>;
 
-const Template = (args: any) => {
+const Template = (args: React.ComponentProps<typeof Modal>) => {
   const [open, setOpen] = React.useState(false);
   return (
     <>

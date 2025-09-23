@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { vi } from "vitest";
 import { Input } from "./input";
 
 describe("Input", () => {
@@ -24,9 +23,9 @@ describe("Input", () => {
   });
 
   it("supports different sizes", () => {
-    render(<Input size="sm" placeholder="Small" />);
+  render(<Input uiSize="sm" placeholder="Small" />);
     expect(screen.getByPlaceholderText("Small")).toHaveClass("h-8");
-    render(<Input size="lg" placeholder="Large" />);
+  render(<Input uiSize="lg" placeholder="Large" />);
     expect(screen.getByPlaceholderText("Large")).toHaveClass("h-12");
   });
 

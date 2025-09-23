@@ -14,7 +14,7 @@ const meta: Meta<typeof Drawer> = {
 export default meta;
 type Story = StoryObj<typeof Drawer>;
 
-const Template = (args: any) => {
+const Template = (args: React.ComponentProps<typeof Drawer>) => {
   const [open, setOpen] = React.useState(false);
   return (
     <>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { breadcrumbsVariants, breadcrumbItemVariants, BreadcrumbsVariants, BreadcrumbItemVariants } from "./variants";
+import { breadcrumbsVariants, breadcrumbItemVariants, BreadcrumbsVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 export type Breadcrumb = {

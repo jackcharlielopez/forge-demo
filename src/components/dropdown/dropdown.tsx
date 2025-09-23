@@ -1,5 +1,5 @@
 import * as React from "react";
-import { dropdownVariants, dropdownItemVariants, DropdownVariants, DropdownItemVariants } from "./variants";
+import { dropdownVariants, dropdownItemVariants, DropdownVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 type DropdownItem = {

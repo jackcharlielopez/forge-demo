@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Timeline } from "./timeline.js";
-import * as React from "react";
 
 const meta: Meta<typeof Timeline> = {
   title: "UI/Timeline",

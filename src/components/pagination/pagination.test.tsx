@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { Pagination } from "./pagination";
 import * as React from "react";
-import { vi } from 'vitest';
 
 describe("Pagination", () => {
   it("renders page buttons and highlights active", () => {
@@ -24,7 +23,7 @@ describe("Pagination", () => {
   expect(screen.getByLabelText("Previous page")).toBeDisabled();
   render(<Pagination page={3} pageCount={3} onPageChange={() => {}} />);
   const nextButtons = screen.getAllByLabelText("Next page");
-  expect(nextButtons.some(btn => btn.disabled)).toBe(true);
+  expect(nextButtons.some(btn => (btn as HTMLButtonElement).disabled)).toBe(true);
   });
 
   it("shows ellipsis for large page counts", () => {

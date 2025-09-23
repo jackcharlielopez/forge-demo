@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { vi } from "vitest";
 import { Select } from "./select";
 
 describe("Select", () => {
@@ -31,9 +30,9 @@ describe("Select", () => {
   });
 
   it("supports different sizes", () => {
-    render(<Select options={options} size="sm" />);
+  render(<Select options={options} uiSize="sm" />);
     expect(screen.getAllByRole("combobox")[0]).toHaveClass("h-8");
-    render(<Select options={options} size="lg" />);
+  render(<Select options={options} uiSize="lg" />);
     expect(screen.getAllByRole("combobox")[1]).toHaveClass("h-12");
   });
 

@@ -1,4 +1,5 @@
 import * as React from "react";
+type TimeoutRef = number | ReturnType<(typeof globalThis)['setTimeout']>;
 import { tooltipVariants, TooltipVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
@@ -26,13 +27,13 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
     ref
   ) => {
     const [open, setOpen] = React.useState(false);
-    const timeout = React.useRef<number>();
+  const timeout = React.useRef<TimeoutRef>();
 
     const show = () => {
-      timeout.current = window.setTimeout(() => setOpen(true), delay);
+      timeout.current = globalThis.setTimeout(() => setOpen(true), delay);
     };
     const hide = () => {
-      clearTimeout(timeout.current);
+      globalThis.clearTimeout(timeout.current);
       setOpen(false);
     };
 

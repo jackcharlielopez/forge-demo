@@ -39,12 +39,12 @@ export const Indeterminate: Story = {
 
 export const Small: Story = {
   args: {
-    size: "sm",
+  uiSize: "sm",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: "lg",
+  uiSize: "lg",
   },
 };

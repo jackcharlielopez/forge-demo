@@ -9,21 +9,23 @@ export interface SelectOption {
   disabled?: boolean;
 }
 
-export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement>, VariantProps<typeof selectVariants> {
+export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">, Omit<VariantProps<typeof selectVariants>, "size"> {
+  uiSize?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'error' | 'success';
   options: SelectOption[];
   error?: boolean;
   success?: boolean;
 }
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ className, variant, size, error, success, options, ...props }, ref) => {
+  ({ className, variant, uiSize, error, success, options, ...props }, ref) => {
     let computedVariant = variant;
     if (error) computedVariant = "error";
     else if (success) computedVariant = "success";
     return (
       <select
         ref={ref}
-        className={cn(selectVariants({ variant: computedVariant, size, className }))}
+  className={cn(selectVariants({ variant: computedVariant, size: uiSize, className }))}
         aria-invalid={!!error}
         {...props}
       >

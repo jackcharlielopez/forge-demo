@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { Menu } from "./menu";
 import * as React from "react";
-import { vi } from "vitest";
 
 describe("Menu", () => {
   const items = [

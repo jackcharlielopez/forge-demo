@@ -1,5 +1,5 @@
 import * as React from "react";
-import { menuVariants, menuItemVariants, MenuVariants, MenuItemVariants } from "./variants";
+import { menuVariants, menuItemVariants, MenuVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 type MenuItem = {

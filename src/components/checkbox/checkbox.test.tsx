@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { vi } from "vitest";
 import { Checkbox } from "./checkbox";
 
 describe("Checkbox", () => {
@@ -31,9 +30,9 @@ describe("Checkbox", () => {
   });
 
   it("supports different sizes", () => {
-    render(<Checkbox size="sm" />);
+  render(<Checkbox uiSize="sm" />);
     expect(screen.getAllByRole("checkbox")[0]).toHaveClass("w-4");
-    render(<Checkbox size="lg" />);
+  render(<Checkbox uiSize="lg" />);
     expect(screen.getAllByRole("checkbox")[1]).toHaveClass("w-6");
   });
 

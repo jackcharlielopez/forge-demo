@@ -1,5 +1,5 @@
 import * as React from "react";
-import { paginationVariants, pageButtonVariants, PaginationVariants, PageButtonVariants } from "./variants";
+import { paginationVariants, pageButtonVariants, PaginationVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 type PaginationProps = React.HTMLAttributes<HTMLDivElement> & {
