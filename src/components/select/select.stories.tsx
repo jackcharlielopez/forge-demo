@@ -22,7 +22,6 @@ type Story = StoryObj<typeof Select>;
 export const Default: Story = {
   args: {
     options,
-    placeholder: "Select an option",
   },
 };
 
@@ -31,7 +30,6 @@ export const Error: Story = {
     options,
     variant: "error",
     error: true,
-    placeholder: "Error state",
   },
 };
 
@@ -40,22 +38,19 @@ export const Success: Story = {
     options,
     variant: "success",
     success: true,
-    placeholder: "Success state",
   },
 };
 
 export const Small: Story = {
   args: {
     options,
-  uiSize: "sm",
-    placeholder: "Small select",
+    uiSize: "sm",
   },
 };
 
 export const Large: Story = {
   args: {
     options,
-  uiSize: "lg",
-    placeholder: "Large select",
+    uiSize: "lg",
   },
 };

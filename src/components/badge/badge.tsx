@@ -3,7 +3,7 @@ import { type VariantProps } from "class-variance-authority";
 import { badgeVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>, VariantProps<typeof badgeVariants> {}
+export interface BadgeProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "color">, VariantProps<typeof badgeVariants> {}
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
   ({ className, color, shape, ...props }, ref) => {

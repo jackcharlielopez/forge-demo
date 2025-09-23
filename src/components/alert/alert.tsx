@@ -3,7 +3,7 @@ import { type VariantProps } from "class-variance-authority";
 import { alertVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-export interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof alertVariants> {
+export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "title" | "description">, VariantProps<typeof alertVariants> {
   icon?: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;

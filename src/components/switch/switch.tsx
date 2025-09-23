@@ -3,7 +3,7 @@ import { type VariantProps } from "class-variance-authority";
 import { switchVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
-export interface SwitchProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type">, VariantProps<typeof switchVariants> {
+export interface SwitchProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type" | "onChange">, VariantProps<typeof switchVariants> {
   checked?: boolean;
   error?: boolean;
   success?: boolean;

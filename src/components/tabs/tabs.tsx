@@ -75,7 +75,8 @@ export type TabPanelProps = {
   children: React.ReactNode;
 };
 
-export const TabPanel = ({ children }: Omit<TabPanelProps, 'value'> & { children: React.ReactNode }) => {
+export const TabPanel = (props: TabPanelProps) => {
   // This is a helper for usage, actual rendering is handled in Tabs
-  return <>{children}</>;
+  // The value prop is used by Tabs via child.props.value
+  return <>{props.children}</>;
 };
