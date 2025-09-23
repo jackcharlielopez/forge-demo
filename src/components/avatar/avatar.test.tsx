@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Avatar } from "./avatar.js";
+import { Avatar } from "./avatar";
 
 describe("Avatar", () => {
   it("renders with default props", () => {

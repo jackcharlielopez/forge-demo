@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Breadcrumbs } from "./breadcrumbs.js";
+import { Breadcrumbs } from "./breadcrumbs";
 import * as React from "react";
 
 describe("Breadcrumbs", () => {

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Button } from "./button.js";
+import { Button } from "./button";
 
 describe("Button", () => {
   it("renders with default props", () => {

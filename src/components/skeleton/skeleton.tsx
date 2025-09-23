@@ -1,5 +1,5 @@
 import * as React from "react";
-import { skeletonVariants, SkeletonVariants } from "./variants.js";
+import { skeletonVariants, SkeletonVariants } from "./variants";
 import { cn } from "../../utils/cn";
 
 type SkeletonProps = React.HTMLAttributes<HTMLDivElement> & {
