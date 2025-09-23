@@ -57,18 +57,18 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
         >
           ‹
         </button>
-        {pages.map((p, i) =>
-          p === "..." ? (
-            <span key={i} className="px-2 select-none">…</span>
+        {pages.map((pageNum, idx) =>
+          pageNum === "..." ? (
+            <span key={idx} className="px-2 select-none">…</span>
           ) : (
             <button
-              key={p}
+              key={typeof pageNum === 'string' ? `ellipsis-${idx}` : `page-${pageNum}`}
               type="button"
-              className={pageButtonVariants({ active: p === page })}
-              onClick={() => onPageChange(Number(p))}
-              aria-current={p === page ? "page" : undefined}
+              className={pageButtonVariants({ active: pageNum === page })}
+              onClick={() => onPageChange(Number(pageNum))}
+              aria-current={pageNum === page ? "page" : undefined}
             >
-              {p}
+              {pageNum}
             </button>
           )
         )}

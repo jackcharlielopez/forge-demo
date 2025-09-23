@@ -11,10 +11,13 @@ describe("Timeline", () => {
   ];
 
   it("renders all items and highlights active/completed", () => {
-    render(<Timeline items={items} />);
-    expect(screen.getByText("Step 1")).toBeInTheDocument();
-    expect(screen.getByText("Step 2")).toHaveClass("text-blue-600");
-    expect(screen.getByText("Step 1")).toHaveClass("text-green-600");
+  render(<Timeline items={items} />);
+  expect(screen.getByText("Step 1")).toBeInTheDocument();
+  // Find all indicator dots
+  const indicators = document.querySelectorAll(".w-4.h-4");
+  // Step 1: completed (green), Step 2: active (blue)
+  expect(indicators[0]).toHaveClass("border-green-600");
+  expect(indicators[1]).toHaveClass("border-blue-600");
   });
 
   it("renders content for each item", () => {

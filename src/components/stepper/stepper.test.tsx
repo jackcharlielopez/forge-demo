@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Stepper } from "./stepper";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Stepper", () => {
   const steps = [
@@ -16,14 +18,14 @@ describe("Stepper", () => {
   });
 
   it("calls onChange when step is clicked", () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Stepper steps={steps} defaultValue="s1" onChange={onChange} />);
     fireEvent.click(screen.getByText("Step 3"));
     expect(onChange).toHaveBeenCalledWith("s3");
   });
 
   it("does not call onChange for disabled step", () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(
       <Stepper
         steps={[...steps, { label: "Step 4", value: "s4", disabled: true }]}

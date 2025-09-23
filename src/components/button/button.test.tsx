@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import { Button } from "./button";
 
 describe("Button", () => {
@@ -36,13 +38,13 @@ describe("Button", () => {
   });
 
   it("forwards ref", () => {
-    const ref = jest.fn();
+  const ref = vi.fn();
     render(<Button ref={ref}>Click me</Button>);
     expect(ref).toHaveBeenCalled();
   });
 
   it("spreads additional props", async () => {
-    const onClick = jest.fn();
+  const onClick = vi.fn();
     render(<Button onClick={onClick}>Click me</Button>);
 
     await userEvent.click(screen.getByRole("button"));

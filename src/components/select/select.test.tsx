@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import { Select } from "./select";
 
 describe("Select", () => {
@@ -30,13 +32,13 @@ describe("Select", () => {
 
   it("supports different sizes", () => {
     render(<Select options={options} size="sm" />);
-  expect(screen.getAllByRole("combobox")[0]).toHaveClass("h-8");
-  render(<Select options={options} size="lg" />);
-  expect(screen.getAllByRole("combobox")[1]).toHaveClass("h-12");
+    expect(screen.getAllByRole("combobox")[0]).toHaveClass("h-8");
+    render(<Select options={options} size="lg" />);
+    expect(screen.getAllByRole("combobox")[1]).toHaveClass("h-12");
   });
 
   it("spreads additional props", async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Select options={options} onChange={onChange} />);
     await userEvent.selectOptions(screen.getByRole("combobox"), "2");
     expect(onChange).toHaveBeenCalled();

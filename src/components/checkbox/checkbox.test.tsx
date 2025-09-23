@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import { Checkbox } from "./checkbox";
 
 describe("Checkbox", () => {
@@ -30,13 +32,13 @@ describe("Checkbox", () => {
 
   it("supports different sizes", () => {
     render(<Checkbox size="sm" />);
-  expect(screen.getAllByRole("checkbox")[0]).toHaveClass("w-4");
-  render(<Checkbox size="lg" />);
-  expect(screen.getAllByRole("checkbox")[1]).toHaveClass("w-6");
+    expect(screen.getAllByRole("checkbox")[0]).toHaveClass("w-4");
+    render(<Checkbox size="lg" />);
+    expect(screen.getAllByRole("checkbox")[1]).toHaveClass("w-6");
   });
 
   it("spreads additional props", async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Checkbox onChange={onChange} />);
     await userEvent.click(screen.getByRole("checkbox"));
     expect(onChange).toHaveBeenCalled();

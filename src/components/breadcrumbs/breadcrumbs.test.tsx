@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Breadcrumbs } from "./breadcrumbs";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Breadcrumbs", () => {
   const items = [
@@ -16,10 +18,10 @@ describe("Breadcrumbs", () => {
   });
 
   it("calls onClick for links", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(
       <Breadcrumbs
-        items={items.map((item) => item.href ? { ...item, onClick } : item)}
+        items={items.map((item) => (item.href ? { ...item, onClick } : item))}
       />
     );
     fireEvent.click(screen.getByText("Home"));

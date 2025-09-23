@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import { Input } from "./input";
 
 describe("Input", () => {
@@ -29,7 +31,7 @@ describe("Input", () => {
   });
 
   it("spreads additional props", async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Input onChange={onChange} placeholder="Change me" />);
     await userEvent.type(screen.getByPlaceholderText("Change me"), "abc");
     expect(onChange).toHaveBeenCalled();

@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Dropdown } from "./dropdown";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Dropdown", () => {
   const items = [
@@ -25,11 +27,13 @@ describe("Dropdown", () => {
   });
 
   it("does not call onClick for disabled item", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(
       <Dropdown
         trigger={<button>Open</button>}
-        items={items.map((item) => item.label === "Disabled" ? { ...item, onClick } : item)}
+        items={items.map((item) =>
+          item.label === "Disabled" ? { ...item, onClick } : item
+        )}
       />
     );
     fireEvent.click(screen.getByText("Open"));

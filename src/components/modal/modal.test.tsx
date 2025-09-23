@@ -1,4 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
+import { vi } from "vitest";
 import { Modal } from "./modal";
 
 describe("Modal", () => {
@@ -22,7 +24,7 @@ describe("Modal", () => {
   });
 
   it("calls onClose when close button is clicked", () => {
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(
       <Modal open={true} onClose={onClose} title="Closable Modal">
         <div>Content</div>

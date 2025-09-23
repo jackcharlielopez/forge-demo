@@ -17,6 +17,7 @@
     "declaration": true,
     "outDir": "dist"
   },
-  "include": ["src/**/*"],
+  "types": ["vitest", "vitest/globals", "@testing-library/jest-dom"],
+  "include": ["src/**/*", "**/*.test.ts", "**/*.test.tsx"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Menu } from "./menu";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Menu", () => {
   const items = [
@@ -18,11 +20,11 @@ describe("Menu", () => {
   });
 
   it("calls onClick and closes menu", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(
       <Menu
         trigger={<button>Open</button>}
-        items={items.map((item) => item.value === "edit" ? { ...item, onClick } : item)}
+        items={items.map((item) => (item.value === "edit" ? { ...item, onClick } : item))}
       />
     );
     fireEvent.click(screen.getByText("Open"));
@@ -32,11 +34,11 @@ describe("Menu", () => {
   });
 
   it("does not call onClick for disabled item", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
     render(
       <Menu
         trigger={<button>Open</button>}
-        items={items.map((item) => item.value === "disabled" ? { ...item, onClick } : item)}
+        items={items.map((item) => (item.value === "disabled" ? { ...item, onClick } : item))}
       />
     );
     fireEvent.click(screen.getByText("Open"));

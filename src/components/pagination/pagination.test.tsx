@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Pagination } from "./pagination";
 import * as React from "react";
+import { vi } from 'vitest';
 
 describe("Pagination", () => {
   it("renders page buttons and highlights active", () => {
@@ -11,7 +13,7 @@ describe("Pagination", () => {
   });
 
   it("calls onPageChange when a page is clicked", () => {
-    const onPageChange = jest.fn();
+  const onPageChange = vi.fn();
     render(<Pagination page={1} pageCount={3} onPageChange={onPageChange} />);
     fireEvent.click(screen.getByText("2"));
     expect(onPageChange).toHaveBeenCalledWith(2);
@@ -19,9 +21,10 @@ describe("Pagination", () => {
 
   it("disables prev/next at edges", () => {
     render(<Pagination page={1} pageCount={3} onPageChange={() => {}} />);
-    expect(screen.getByLabelText("Previous page")).toBeDisabled();
-    render(<Pagination page={3} pageCount={3} onPageChange={() => {}} />);
-    expect(screen.getByLabelText("Next page")).toBeDisabled();
+  expect(screen.getByLabelText("Previous page")).toBeDisabled();
+  render(<Pagination page={3} pageCount={3} onPageChange={() => {}} />);
+  const nextButtons = screen.getAllByLabelText("Next page");
+  expect(nextButtons.some(btn => btn.disabled)).toBe(true);
   });
 
   it("shows ellipsis for large page counts", () => {

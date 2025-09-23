@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 import { Switch } from "./switch";
 
 describe("Switch", () => {
@@ -24,14 +25,14 @@ describe("Switch", () => {
   });
 
   it("calls onChange when toggled", async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Switch onChange={onChange} />);
     await userEvent.click(screen.getByRole("switch"));
     expect(onChange).toHaveBeenCalledWith(true);
   });
 
   it("does not call onChange when disabled", async () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
     render(<Switch disabled onChange={onChange} />);
     await userEvent.click(screen.getByRole("switch"));
     expect(onChange).not.toHaveBeenCalled();

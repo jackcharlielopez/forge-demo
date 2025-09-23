@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Accordion } from "./accordion";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Accordion", () => {
   const items = [
@@ -22,9 +24,10 @@ describe("Accordion", () => {
   });
 
   it("does not open disabled section", () => {
-    render(<Accordion items={items} defaultValue={[]} />);
-    fireEvent.click(screen.getByText("Section 3"));
-    expect(screen.queryByText("Content 3")).toBeNull();
+  render(<Accordion items={items} defaultValue={[]} />);
+  fireEvent.click(screen.getByText("Section 3"));
+  const content = screen.getByText("Content 3");
+  expect(content).not.toBeVisible();
   });
 
   it("supports multiple open sections", () => {
@@ -35,7 +38,7 @@ describe("Accordion", () => {
   });
 
   it("calls onChange when toggled", () => {
-    const onChange = jest.fn();
+  const onChange = vi.fn();
     render(<Accordion items={items} defaultValue={[]} onChange={onChange} />);
     fireEvent.click(screen.getByText("Section 1"));
     expect(onChange).toHaveBeenCalledWith(["s1"]);

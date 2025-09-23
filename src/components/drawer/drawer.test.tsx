@@ -1,6 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import { Drawer } from "./drawer";
 import * as React from "react";
+import { vi } from "vitest";
 
 describe("Drawer", () => {
   it("renders when open", () => {
@@ -23,7 +25,7 @@ describe("Drawer", () => {
   });
 
   it("calls onClose when close button is clicked", () => {
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(
       <Drawer open={true} onClose={onClose} title="Closable Drawer">
         <div>Content</div>
