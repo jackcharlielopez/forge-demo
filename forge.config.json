@@ -7,5 +7,10 @@
   "typescript": true,
   "tailwind": true,
   "defaultCategory": "ui",
-  "categories": ["ui", "forms", "layout", "navigation"]
+  "categories": [
+    "ui",
+    "forms",
+    "layout",
+    "navigation"
+  ]
 }
